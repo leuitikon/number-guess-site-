@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <pre class="logo" aria-label="Logo">  _____                       _______ _            _   _                 _               
+ / ____|                     |__   __| |          | \ | |               | |              
+| |  __ _   _  ___  ___ ___     | |  | |__   ___  |  \| |_   _ _ __ ___ | |__   ___ _ __ 
+| | |_ | | | |/ _ \/ __/ __|    | |  | '_ \ / _ \ | . ` | | | | '_ ` _ \| '_ \ / _ \ '__|
+| |__| | |_| |  __/\__ \__ \    | |  | | | |  __/ | |\  | |_| | | | | | | |_) |  __/ |   
+ \_____|\__,_|\___||___/___/    |_|  |_| |_|\___| |_| \_|\__,_|_| |_| |_|_.__/ \___|_|   </pre>
+
+    <h1>Number Guessing Game</h1>
+    <p>I'm thinking a number between <b>1</b> and <b>100</b>.</p>
+
+    <div class="row">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">easy (10 attempts)</option>
+        <option value="hard">hard (5 attempts)</option>
+      </select>
+      <button id="btnStart">Start</button>
+    </div>
+
+    <section id="game" class="hidden">
+      <p id="status" class="status"></p>
+
+      <div class="row">
+        <input id="guessInput" type="number" min="1" max="100" placeholder="Make a guess (1-100)" />
+        <button id="btnGuess">Guess</button>
+      </div>
+
+      <p id="attemptsLeft" class="small"></p>
+
+      <div class="row">
+        <button id="btnAgain" class="secondary">Play again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
